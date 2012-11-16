@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-// ptcmp is a command line utility to compare before/after XML
+// ptcmp is a command line utility for processing before/after XML
 // output of Grant Skinner's PerformanceTest v2 Beta
 package main
 
