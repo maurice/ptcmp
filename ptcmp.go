@@ -78,12 +78,7 @@ func change(before, after float32) float32 {
 	return change
 }
 
-const table = `
-{{$baselineSuites := .BaselineSuites}}
-{{$testSuites := .TestSuites}}
-<table>
-	{{range $suiteIndex, $bs := $baselineSuites}}
-	{{$ts := index $testSuites $suiteIndex}}
+const table = `{{$baselineSuites := .BaselineSuites}}{{$testSuites := .TestSuites}}<table>{{range $suiteIndex, $bs := $baselineSuites}}{{$ts := index $testSuites $suiteIndex}}
 	<thead>
 		<th colspan="5">{{$bs.Description}}</th>
 	</thead>
@@ -93,18 +88,14 @@ const table = `
 		<th align="right">Original memory</th>
 		<th align="right">Time (change %)</th>
 		<th align="right">Memory (change %)</th>
-	</thhead>
-	{{range $testIndex, $bt := $bs.Tests}}
-	{{$tt := index $ts.Tests $testIndex}}
+	</thhead>{{range $testIndex, $bt := $bs.Tests}}{{$tt := index $ts.Tests $testIndex}}
 	<tr>
 		<td><code>{{$bt.Name}}</code></td>
 		<td align="right">{{$bt.Time}}</td>
 		<td align="right">{{$bt.Memory}}</td>
 		<td align="right">{{$tt.Time}} ({{change $bt.Time $tt.Time | printf "%0.1f"}})</td>
 		<td align="right">{{$tt.Memory}} ({{change $bt.Memory $tt.Memory | printf "%0.1f"}})</td>
-	</tr>
-	{{end}}
-	{{end}}
+	</tr>{{end}}{{end}}
 </table>
 `
 
