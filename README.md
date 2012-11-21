@@ -8,4 +8,4 @@ Usage
 
     ptcmp a.xml b.xml
 
-Use the example `baseline.xml` and `latest.xml` to see it in action quickly
+See the `xmls` directory for example XML output to try the tool with
