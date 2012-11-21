@@ -1,0 +1,628 @@
+<TestCollection playerVersion="MAC 10,0,22,87" isDebugger="false" playerType="StandAlone" os="Mac OS 10.6.2" manufacturer="Adobe Macintosh" cpuArchitecture="undefined">
+  <TestSuite name="Bitwise" time="488" tareTime="0" initTime="0" description="Comparing floor &amp; round to bitwise equivalents. 100000 loops." error="false">
+    <MethodTest name="math" time="486.3" min="483" max="496" deviation="0.027" description="Math.round(n), Math.floor(n), Math.floor(n/2)" memory="8369" retainedMemory="151">
+      <iteration time="496" memory="8444" retainedMemory="608"/>
+      <iteration time="483" memory="8344" retainedMemory="0"/>
+      <iteration time="483" memory="8348" retainedMemory="0"/>
+      <iteration time="483" memory="8344" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="bitwise" time="2.8" min="2" max="3" deviation="0.364" description="n+0.5|0, n|0, n>>1" memory="0" retainedMemory="0">
+      <iteration time="3" memory="0" retainedMemory="0"/>
+      <iteration time="3" memory="0" retainedMemory="0"/>
+      <iteration time="3" memory="0" retainedMemory="0"/>
+      <iteration time="2" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="CollectionIteration" time="83" tareTime="0" initTime="771" description="Iterating different collection types. 100000 loops." error="false">
+    <MethodTest name="Array" time="12.3" min="12" max="13" deviation="0.082" memory="621" retainedMemory="489">
+      <iteration time="12" memory="1680" retainedMemory="1156"/>
+      <iteration time="12" memory="804" retainedMemory="804"/>
+      <iteration time="13" memory="0" retainedMemory="0"/>
+      <iteration time="12" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="Vector" time="1.8" min="1" max="2" deviation="0.571" memory="0" retainedMemory="0">
+      <iteration time="2" memory="0" retainedMemory="0"/>
+      <iteration time="2" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="2" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="linked list" time="1.0" min="1" max="1" deviation="0.000" memory="0" retainedMemory="0">
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="Dictionary" time="25.8" min="25" max="26" deviation="0.039" memory="201" retainedMemory="69">
+      <iteration time="26" memory="0" retainedMemory="-524"/>
+      <iteration time="26" memory="804" retainedMemory="804"/>
+      <iteration time="26" memory="0" retainedMemory="0"/>
+      <iteration time="25" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="Object w/uint keys" time="44.3" min="44" max="45" deviation="0.023" memory="201" retainedMemory="69">
+      <iteration time="45" memory="0" retainedMemory="-524"/>
+      <iteration time="44" memory="804" retainedMemory="804"/>
+      <iteration time="44" memory="0" retainedMemory="0"/>
+      <iteration time="44" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="VectorPopulation" time="91" tareTime="3" initTime="0" description="Comparing different methods of populating a Vector. 1000000 loops." error="false">
+    <MethodTest name="push" time="46.3" min="44" max="52" deviation="0.173" description="vec.push(i)" memory="4384" retainedMemory="0">
+      <iteration time="52" memory="4388" retainedMemory="4"/>
+      <iteration time="45" memory="4384" retainedMemory="0"/>
+      <iteration time="44" memory="4384" retainedMemory="0"/>
+      <iteration time="44" memory="4384" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="length" time="34.8" min="34" max="36" deviation="0.058" description="vec[vec.length]=i" memory="4387" retainedMemory="3">
+      <iteration time="34" memory="4396" retainedMemory="12"/>
+      <iteration time="34" memory="4384" retainedMemory="0"/>
+      <iteration time="35" memory="4384" retainedMemory="0"/>
+      <iteration time="36" memory="4384" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="iterator" time="11.0" min="11" max="11" deviation="0.000" description="vec[i]=i" memory="3908" retainedMemory="0">
+      <iteration time="11" memory="3908" retainedMemory="0"/>
+      <iteration time="11" memory="3908" retainedMemory="0"/>
+      <iteration time="11" memory="3908" retainedMemory="0"/>
+      <iteration time="11" memory="3908" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="Casting" time="314" tareTime="2" initTime="243" description="Comparing different methods of casting a value from an array. 1000000 loops." error="false">
+    <MethodTest name="none" time="19.0" min="19" max="19" deviation="0.000" description="implicit" memory="0" retainedMemory="0">
+      <iteration time="19" memory="0" retainedMemory="0"/>
+      <iteration time="19" memory="0" retainedMemory="0"/>
+      <iteration time="19" memory="0" retainedMemory="0"/>
+      <iteration time="19" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="constructorCasting" time="133.3" min="133" max="134" deviation="0.008" description="constructor-style" memory="0" retainedMemory="0">
+      <iteration time="133" memory="0" retainedMemory="0"/>
+      <iteration time="133" memory="0" retainedMemory="0"/>
+      <iteration time="134" memory="0" retainedMemory="0"/>
+      <iteration time="133" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="asCasting" time="162.5" min="162" max="163" deviation="0.006" description="'as' operator" memory="0" retainedMemory="0">
+      <iteration time="163" memory="0" retainedMemory="0"/>
+      <iteration time="162" memory="0" retainedMemory="0"/>
+      <iteration time="162" memory="0" retainedMemory="0"/>
+      <iteration time="163" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="CastingPromotion" time="426" tareTime="3" initTime="0" description="Evaluating impact of casting an array iterator. 1000000 loops." error="false">
+    <MethodTest name="none" time="134.5" min="120" max="154" deviation="0.253" description="i*2" memory="16388" retainedMemory="0">
+      <iteration time="154" memory="16392" retainedMemory="4"/>
+      <iteration time="126" memory="16388" retainedMemory="0"/>
+      <iteration time="138" memory="16388" retainedMemory="0"/>
+      <iteration time="120" memory="16388" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="constructorCasting" time="100.8" min="88" max="105" deviation="0.169" description="uint(i*2)" memory="16388" retainedMemory="0">
+      <iteration time="88" memory="16388" retainedMemory="0"/>
+      <iteration time="105" memory="16388" retainedMemory="0"/>
+      <iteration time="105" memory="16388" retainedMemory="0"/>
+      <iteration time="105" memory="16388" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="asCasting" time="192.0" min="192" max="192" deviation="0.000" description="i*2 as uint" memory="16388" retainedMemory="0">
+      <iteration time="192" memory="16388" retainedMemory="0"/>
+      <iteration time="192" memory="16388" retainedMemory="0"/>
+      <iteration time="192" memory="16388" retainedMemory="0"/>
+      <iteration time="192" memory="16388" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="Collections" time="474" tareTime="3" initTime="0" description="Comparing cost of constructing and populating different collection types. 1000000 loops." error="false">
+    <MethodTest name="array" time="88.5" min="88" max="89" deviation="0.011" description="array" memory="9724" retainedMemory="12">
+      <iteration time="89" memory="9764" retainedMemory="52"/>
+      <iteration time="88" memory="9712" retainedMemory="0"/>
+      <iteration time="88" memory="9712" retainedMemory="0"/>
+      <iteration time="89" memory="9712" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="arrayFixed" time="87.0" min="87" max="87" deviation="0.000" description="array, fixed" memory="9712" retainedMemory="0">
+      <iteration time="87" memory="9712" retainedMemory="0"/>
+      <iteration time="87" memory="9712" retainedMemory="0"/>
+      <iteration time="87" memory="9712" retainedMemory="0"/>
+      <iteration time="87" memory="9712" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="vector" time="52.0" min="51" max="54" deviation="0.058" description="vector" memory="8769" retainedMemory="1">
+      <iteration time="54" memory="8776" retainedMemory="8"/>
+      <iteration time="52" memory="8768" retainedMemory="0"/>
+      <iteration time="51" memory="8768" retainedMemory="0"/>
+      <iteration time="51" memory="8768" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="vectorFixed" time="20.0" min="20" max="20" deviation="0.000" description="vector, fixed" memory="7816" retainedMemory="0">
+      <iteration time="20" memory="7816" retainedMemory="0"/>
+      <iteration time="20" memory="7816" retainedMemory="0"/>
+      <iteration time="20" memory="7816" retainedMemory="0"/>
+      <iteration time="20" memory="7816" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="linkedList" time="227.5" min="227" max="228" deviation="0.004" description="linked list" memory="31736" retainedMemory="0">
+      <iteration time="228" memory="31736" retainedMemory="0"/>
+      <iteration time="227" memory="31736" retainedMemory="0"/>
+      <iteration time="227" memory="31736" retainedMemory="0"/>
+      <iteration time="228" memory="31736" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="CollectionSplice" time="2233" tareTime="0" initTime="332" description="Comparing cost of removing 10000 items from a collection of 100000." error="false">
+    <MethodTest name="array" time="230.3" min="187" max="273" deviation="0.374" description="array" memory="8" retainedMemory="0">
+      <iteration time="273" memory="12" retainedMemory="0"/>
+      <iteration time="245" memory="8" retainedMemory="0"/>
+      <iteration time="216" memory="8" retainedMemory="0"/>
+      <iteration time="187" memory="8" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="vector" time="1973.5" min="1131" max="2605" deviation="0.747" description="vector" memory="8" retainedMemory="0">
+      <iteration time="2605" memory="8" retainedMemory="0"/>
+      <iteration time="2317" memory="8" retainedMemory="0"/>
+      <iteration time="1841" memory="8" retainedMemory="0"/>
+      <iteration time="1131" memory="8" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="linkedList" time="0.3" min="0" max="1" deviation="0.000" description="linked list" memory="0" retainedMemory="0">
+      <iteration time="0" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="0" memory="0" retainedMemory="0"/>
+      <iteration time="0" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="dictionary" time="20.3" min="20" max="21" deviation="0.049" description="dictionary" memory="456" retainedMemory="0">
+      <iteration time="21" memory="456" retainedMemory="0"/>
+      <iteration time="20" memory="456" retainedMemory="0"/>
+      <iteration time="20" memory="456" retainedMemory="0"/>
+      <iteration time="20" memory="456" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="hash" time="10.5" min="10" max="11" deviation="0.095" description="hash/object" memory="4" retainedMemory="0">
+      <iteration time="10" memory="4" retainedMemory="0"/>
+      <iteration time="11" memory="4" retainedMemory="0"/>
+      <iteration time="11" memory="4" retainedMemory="0"/>
+      <iteration time="10" memory="4" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="ConditionalPriority" time="116" tareTime="2" initTime="0" description="Demonstrates performance benefit of prioritizing conditionals. 1000000 loops." error="false">
+    <MethodTest name="prioritized" time="3.5" min="3" max="4" deviation="0.286" description="prioritized" memory="0" retainedMemory="0">
+      <iteration time="3" memory="0" retainedMemory="0"/>
+      <iteration time="4" memory="0" retainedMemory="0"/>
+      <iteration time="4" memory="0" retainedMemory="0"/>
+      <iteration time="3" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="unprioritized" time="113.5" min="113" max="114" deviation="0.009" description="unprioritized" memory="0" retainedMemory="0">
+      <iteration time="114" memory="0" retainedMemory="0"/>
+      <iteration time="114" memory="0" retainedMemory="0"/>
+      <iteration time="113" memory="0" retainedMemory="0"/>
+      <iteration time="113" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="Events" time="405" tareTime="0" initTime="0" description="Compares the performance of events and callbacks. 100000 loops." error="false">
+    <MethodTest name="event" time="394.3" min="393" max="395" deviation="0.005" description="dispatch event" memory="3172" retainedMemory="4">
+      <iteration time="395" memory="3172" retainedMemory="4"/>
+      <iteration time="393" memory="3172" retainedMemory="4"/>
+      <iteration time="395" memory="3172" retainedMemory="4"/>
+      <iteration time="394" memory="3172" retainedMemory="4"/>
+    </MethodTest>
+    <MethodTest name="callback" time="11.0" min="11" max="11" deviation="0.000" description="callback" memory="0" retainedMemory="0">
+      <iteration time="11" memory="0" retainedMemory="0"/>
+      <iteration time="11" memory="0" retainedMemory="0"/>
+      <iteration time="11" memory="0" retainedMemory="0"/>
+      <iteration time="11" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="FunctionScope" time="173" tareTime="0" initTime="0" description="Tests the impact of function scope on access &amp; execution time. 100000 loops." error="false">
+    <MethodTest name="anonymous" time="127.5" min="126" max="130" deviation="0.031" description="anonymous function" memory="36737" retainedMemory="53">
+      <iteration time="130" memory="36888" retainedMemory="204"/>
+      <iteration time="126" memory="36688" retainedMemory="4"/>
+      <iteration time="127" memory="36688" retainedMemory="4"/>
+      <iteration time="127" memory="36688" retainedMemory="4"/>
+    </MethodTest>
+    <MethodTest name="anonymousRef" time="14.0" min="14" max="14" deviation="0.000" description="reference to anonymous" memory="0" retainedMemory="0">
+      <iteration time="14" memory="0" retainedMemory="0"/>
+      <iteration time="14" memory="0" retainedMemory="0"/>
+      <iteration time="14" memory="0" retainedMemory="0"/>
+      <iteration time="14" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="reference" time="13.5" min="13" max="14" deviation="0.074" description="reference (CO)" memory="0" retainedMemory="0">
+      <iteration time="14" memory="0" retainedMemory="0"/>
+      <iteration time="14" memory="0" retainedMemory="0"/>
+      <iteration time="13" memory="0" retainedMemory="0"/>
+      <iteration time="13" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="method" time="1.0" min="1" max="1" deviation="0.000" description="internal method" memory="0" retainedMemory="0">
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="external" time="1.0" min="1" max="1" deviation="0.000" description="external method" memory="0" retainedMemory="0">
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="staticTest" time="0.3" min="0" max="1" deviation="0.000" description="static" memory="0" retainedMemory="0">
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="0" memory="0" retainedMemory="0"/>
+      <iteration time="0" memory="0" retainedMemory="0"/>
+      <iteration time="0" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="externalStatic" time="7.5" min="7" max="8" deviation="0.133" description="external static" memory="0" retainedMemory="0">
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="7" memory="0" retainedMemory="0"/>
+      <iteration time="7" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="local" time="10.3" min="10" max="11" deviation="0.098" description="local function" memory="0" retainedMemory="0">
+      <iteration time="10" memory="0" retainedMemory="0"/>
+      <iteration time="10" memory="0" retainedMemory="0"/>
+      <iteration time="11" memory="0" retainedMemory="0"/>
+      <iteration time="10" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="GraphicsTests" time="279" tareTime="0" initTime="0" description="Compares different methods for using the graphics API to draw a shape with 100000 lines, or draw 1000 'short' shapes with 100 lines." error="false">
+    <MethodTest name="fullPath" time="19.5" min="17" max="26" deviation="0.462" description="shape.graphics.lineTo" memory="885" retainedMemory="885">
+      <iteration time="26" memory="3544" retainedMemory="3544"/>
+      <iteration time="17" memory="0" retainedMemory="0"/>
+      <iteration time="18" memory="0" retainedMemory="0"/>
+      <iteration time="17" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="withGraphics" time="185.5" min="185" max="186" deviation="0.005" description="with(shape.graphics)" memory="0" retainedMemory="0">
+      <iteration time="186" memory="0" retainedMemory="0"/>
+      <iteration time="185" memory="0" retainedMemory="0"/>
+      <iteration time="185" memory="0" retainedMemory="0"/>
+      <iteration time="186" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="reference" time="16.5" min="16" max="17" deviation="0.061" description="g.lineTo" memory="0" retainedMemory="0">
+      <iteration time="16" memory="0" retainedMemory="0"/>
+      <iteration time="17" memory="0" retainedMemory="0"/>
+      <iteration time="16" memory="0" retainedMemory="0"/>
+      <iteration time="17" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="shortReference" time="16.0" min="16" max="16" deviation="0.000" description="g.lineTo *short" memory="0" retainedMemory="0">
+      <iteration time="16" memory="0" retainedMemory="0"/>
+      <iteration time="16" memory="0" retainedMemory="0"/>
+      <iteration time="16" memory="0" retainedMemory="0"/>
+      <iteration time="16" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="drawPath" time="21.3" min="21" max="22" deviation="0.047" description="drawPath" memory="2250" retainedMemory="294">
+      <iteration time="22" memory="3132" retainedMemory="1176"/>
+      <iteration time="21" memory="1956" retainedMemory="0"/>
+      <iteration time="21" memory="1956" retainedMemory="0"/>
+      <iteration time="21" memory="1956" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="drawPathShort" time="22.0" min="22" max="22" deviation="0.000" description="drawPath *short" memory="612" retainedMemory="0">
+      <iteration time="22" memory="616" retainedMemory="4"/>
+      <iteration time="22" memory="612" retainedMemory="0"/>
+      <iteration time="22" memory="612" retainedMemory="0"/>
+      <iteration time="22" memory="612" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="FunctionInlining" time="34" tareTime="3" initTime="0" description="Demonstration of performance impact of function calls in loops. 1000000 loops." error="false">
+    <MethodTest name="callFunction" time="20.8" min="20" max="21" deviation="0.048" description="call function" memory="0" retainedMemory="0">
+      <iteration time="21" memory="0" retainedMemory="0"/>
+      <iteration time="21" memory="0" retainedMemory="0"/>
+      <iteration time="20" memory="0" retainedMemory="0"/>
+      <iteration time="21" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="inline" time="7.5" min="7" max="8" deviation="0.133" description="inlined" memory="0" retainedMemory="0">
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="7" memory="0" retainedMemory="0"/>
+      <iteration time="7" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="inlineOptimized" time="7.5" min="7" max="8" deviation="0.133" description="optimized inline" memory="0" retainedMemory="0">
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="7" memory="0" retainedMemory="0"/>
+      <iteration time="7" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="Literals" time="228" tareTime="24" initTime="0" description="Demonstration of performance impact of function calls in loops. 10000000 loops." error="false">
+    <MethodTest name="variable" time="35.5" min="35" max="36" deviation="0.028" description="variable" memory="0" retainedMemory="0">
+      <iteration time="36" memory="0" retainedMemory="0"/>
+      <iteration time="35" memory="0" retainedMemory="0"/>
+      <iteration time="35" memory="0" retainedMemory="0"/>
+      <iteration time="36" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="collapsed" time="35.8" min="35" max="36" deviation="0.028" description="collapsed literal" memory="0" retainedMemory="0">
+      <iteration time="36" memory="0" retainedMemory="0"/>
+      <iteration time="36" memory="0" retainedMemory="0"/>
+      <iteration time="35" memory="0" retainedMemory="0"/>
+      <iteration time="36" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="uncollapsed" time="158.8" min="158" max="159" deviation="0.006" description="uncollapsed literal" memory="0" retainedMemory="0">
+      <iteration time="159" memory="0" retainedMemory="0"/>
+      <iteration time="159" memory="0" retainedMemory="0"/>
+      <iteration time="159" memory="0" retainedMemory="0"/>
+      <iteration time="158" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="LLConstruction" time="223" tareTime="30" initTime="0" description="Comparing construction/population cost of linked lists &amp; Vectors. 100000 loops." error="false">
+    <MethodTest name="vector" time="25.0" min="25" max="25" deviation="0.000" description="vector" memory="3644" retainedMemory="0">
+      <iteration time="25" memory="3644" retainedMemory="0"/>
+      <iteration time="25" memory="3644" retainedMemory="0"/>
+      <iteration time="25" memory="3644" retainedMemory="0"/>
+      <iteration time="25" memory="3644" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="vectorFixed" time="22.8" min="22" max="23" deviation="0.044" description="vector fixed" memory="3564" retainedMemory="0">
+      <iteration time="23" memory="3564" retainedMemory="0"/>
+      <iteration time="22" memory="3564" retainedMemory="0"/>
+      <iteration time="23" memory="3564" retainedMemory="0"/>
+      <iteration time="23" memory="3564" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="internalNode" time="45.5" min="45" max="46" deviation="0.022" description="internal node" memory="6344" retainedMemory="0">
+      <iteration time="46" memory="6344" retainedMemory="0"/>
+      <iteration time="46" memory="6344" retainedMemory="0"/>
+      <iteration time="45" memory="6344" retainedMemory="0"/>
+      <iteration time="45" memory="6344" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="node" time="41.0" min="41" max="41" deviation="0.000" description="node" memory="6344" retainedMemory="0">
+      <iteration time="41" memory="6344" retainedMemory="0"/>
+      <iteration time="41" memory="6344" retainedMemory="0"/>
+      <iteration time="41" memory="6344" retainedMemory="0"/>
+      <iteration time="41" memory="6344" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="nodeVO" time="25.3" min="25" max="26" deviation="0.040" description="VO node" memory="3960" retainedMemory="0">
+      <iteration time="26" memory="3960" retainedMemory="0"/>
+      <iteration time="25" memory="3960" retainedMemory="0"/>
+      <iteration time="25" memory="3960" retainedMemory="0"/>
+      <iteration time="25" memory="3960" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="nodeFinal" time="41.3" min="41" max="42" deviation="0.024" description="node Final" memory="6344" retainedMemory="0">
+      <iteration time="41" memory="6344" retainedMemory="0"/>
+      <iteration time="41" memory="6344" retainedMemory="0"/>
+      <iteration time="42" memory="6344" retainedMemory="0"/>
+      <iteration time="41" memory="6344" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="nodeFinalVO" time="24.3" min="24" max="25" deviation="0.041" description="VO node Final" memory="3960" retainedMemory="0">
+      <iteration time="24" memory="3960" retainedMemory="0"/>
+      <iteration time="25" memory="3960" retainedMemory="0"/>
+      <iteration time="24" memory="3960" retainedMemory="0"/>
+      <iteration time="24" memory="3960" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="LLIteration" time="103" tareTime="0" initTime="4270" description="Comparing iteration speed of linked lists &amp; Vectors. 1000000 loops." error="false">
+    <MethodTest name="vector" time="17.8" min="17" max="18" deviation="0.056" description="vector" memory="0" retainedMemory="0">
+      <iteration time="18" memory="0" retainedMemory="0"/>
+      <iteration time="18" memory="0" retainedMemory="0"/>
+      <iteration time="18" memory="0" retainedMemory="0"/>
+      <iteration time="17" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="vectorFixed" time="17.8" min="17" max="18" deviation="0.056" description="vector fixed" memory="0" retainedMemory="0">
+      <iteration time="18" memory="0" retainedMemory="0"/>
+      <iteration time="18" memory="0" retainedMemory="0"/>
+      <iteration time="17" memory="0" retainedMemory="0"/>
+      <iteration time="18" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="internalNode" time="16.5" min="16" max="17" deviation="0.061" description="internal node" memory="0" retainedMemory="0">
+      <iteration time="17" memory="0" retainedMemory="0"/>
+      <iteration time="16" memory="0" retainedMemory="0"/>
+      <iteration time="16" memory="0" retainedMemory="0"/>
+      <iteration time="17" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="node" time="17.0" min="17" max="17" deviation="0.000" description="node" memory="0" retainedMemory="0">
+      <iteration time="17" memory="0" retainedMemory="0"/>
+      <iteration time="17" memory="0" retainedMemory="0"/>
+      <iteration time="17" memory="0" retainedMemory="0"/>
+      <iteration time="17" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="nodeVO" time="10.5" min="10" max="11" deviation="0.095" description="VO node" memory="0" retainedMemory="0">
+      <iteration time="11" memory="0" retainedMemory="0"/>
+      <iteration time="10" memory="0" retainedMemory="0"/>
+      <iteration time="10" memory="0" retainedMemory="0"/>
+      <iteration time="11" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="nodeFinal" time="16.8" min="16" max="17" deviation="0.060" description="node Final" memory="0" retainedMemory="0">
+      <iteration time="17" memory="0" retainedMemory="0"/>
+      <iteration time="16" memory="0" retainedMemory="0"/>
+      <iteration time="17" memory="0" retainedMemory="0"/>
+      <iteration time="17" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="nodeFinalVO" time="10.3" min="10" max="11" deviation="0.098" description="VO node Final" memory="0" retainedMemory="0">
+      <iteration time="10" memory="0" retainedMemory="0"/>
+      <iteration time="10" memory="0" retainedMemory="0"/>
+      <iteration time="11" memory="0" retainedMemory="0"/>
+      <iteration time="10" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="LoopHoisting" time="92" tareTime="0" initTime="683" description="Demonstration of loop invariant code motion / loop hoisting. 10000000 loops." error="false">
+    <MethodTest name="unhoisted" time="74.0" min="74" max="74" deviation="0.000" description="unhoisted" memory="0" retainedMemory="0">
+      <iteration time="74" memory="0" retainedMemory="0"/>
+      <iteration time="74" memory="0" retainedMemory="0"/>
+      <iteration time="74" memory="0" retainedMemory="0"/>
+      <iteration time="74" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="hoisted" time="18.3" min="17" max="20" deviation="0.164" description="hoisted" memory="0" retainedMemory="0">
+      <iteration time="17" memory="0" retainedMemory="0"/>
+      <iteration time="17" memory="0" retainedMemory="0"/>
+      <iteration time="20" memory="0" retainedMemory="0"/>
+      <iteration time="19" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="Loops" time="292" tareTime="0" initTime="0" description="Comparing speed of different loop structures. 1000000 loops." error="false">
+    <MethodTest name="forIncrement" time="2.3" min="2" max="3" deviation="0.444" description="for increment" memory="0" retainedMemory="0">
+      <iteration time="3" memory="0" retainedMemory="0"/>
+      <iteration time="2" memory="0" retainedMemory="0"/>
+      <iteration time="2" memory="0" retainedMemory="0"/>
+      <iteration time="2" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="forDecrement" time="3.3" min="3" max="4" deviation="0.308" description="for decrement" memory="0" retainedMemory="0">
+      <iteration time="3" memory="0" retainedMemory="0"/>
+      <iteration time="3" memory="0" retainedMemory="0"/>
+      <iteration time="3" memory="0" retainedMemory="0"/>
+      <iteration time="4" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="whileIncrement" time="2.5" min="2" max="3" deviation="0.400" description="while increment" memory="0" retainedMemory="0">
+      <iteration time="2" memory="0" retainedMemory="0"/>
+      <iteration time="3" memory="0" retainedMemory="0"/>
+      <iteration time="2" memory="0" retainedMemory="0"/>
+      <iteration time="3" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="whileDecrement" time="6.3" min="6" max="7" deviation="0.160" description="while decrement" memory="0" retainedMemory="0">
+      <iteration time="6" memory="0" retainedMemory="0"/>
+      <iteration time="6" memory="0" retainedMemory="0"/>
+      <iteration time="6" memory="0" retainedMemory="0"/>
+      <iteration time="7" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="doWhileIncrement" time="4.0" min="4" max="4" deviation="0.000" description="do while increment" memory="0" retainedMemory="0">
+      <iteration time="4" memory="0" retainedMemory="0"/>
+      <iteration time="4" memory="0" retainedMemory="0"/>
+      <iteration time="4" memory="0" retainedMemory="0"/>
+      <iteration time="4" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="doWhileDecrement" time="4.0" min="4" max="4" deviation="0.000" description="do while decrement" memory="0" retainedMemory="0">
+      <iteration time="4" memory="0" retainedMemory="0"/>
+      <iteration time="4" memory="0" retainedMemory="0"/>
+      <iteration time="4" memory="0" retainedMemory="0"/>
+      <iteration time="4" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="forIn" time="31.3" min="31" max="32" deviation="0.032" description="for...in" memory="0" retainedMemory="0">
+      <iteration time="31" memory="0" retainedMemory="0"/>
+      <iteration time="31" memory="0" retainedMemory="0"/>
+      <iteration time="32" memory="0" retainedMemory="0"/>
+      <iteration time="31" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="forEachIn" time="30.0" min="30" max="30" deviation="0.000" description="for each...in" memory="0" retainedMemory="0">
+      <iteration time="30" memory="0" retainedMemory="0"/>
+      <iteration time="30" memory="0" retainedMemory="0"/>
+      <iteration time="30" memory="0" retainedMemory="0"/>
+      <iteration time="30" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="forEachInUntyped" time="26.3" min="26" max="27" deviation="0.038" description="for each...in untyped" memory="0" retainedMemory="0">
+      <iteration time="27" memory="0" retainedMemory="0"/>
+      <iteration time="26" memory="0" retainedMemory="0"/>
+      <iteration time="26" memory="0" retainedMemory="0"/>
+      <iteration time="26" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="forEachInPosttyped" time="83.5" min="83" max="84" deviation="0.012" description="for each...in posttyped" memory="0" retainedMemory="0">
+      <iteration time="84" memory="0" retainedMemory="0"/>
+      <iteration time="83" memory="0" retainedMemory="0"/>
+      <iteration time="84" memory="0" retainedMemory="0"/>
+      <iteration time="83" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="vecForEach" time="101.0" min="101" max="101" deviation="0.000" description="Vector.forEach" memory="0" retainedMemory="0">
+      <iteration time="101" memory="0" retainedMemory="0"/>
+      <iteration time="101" memory="0" retainedMemory="0"/>
+      <iteration time="101" memory="0" retainedMemory="0"/>
+      <iteration time="101" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="MultDiv" time="412" tareTime="23" initTime="0" description="Compares the same mathematical operation with division and multiplication. 10000000 loops." error="false">
+    <MethodTest name="division" time="290.8" min="290" max="291" deviation="0.003" description="division" memory="0" retainedMemory="0">
+      <iteration time="291" memory="0" retainedMemory="0"/>
+      <iteration time="290" memory="0" retainedMemory="0"/>
+      <iteration time="291" memory="0" retainedMemory="0"/>
+      <iteration time="291" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="multiplication" time="122.3" min="122" max="123" deviation="0.008" description="multiplication" memory="0" retainedMemory="0">
+      <iteration time="123" memory="0" retainedMemory="0"/>
+      <iteration time="122" memory="0" retainedMemory="0"/>
+      <iteration time="122" memory="0" retainedMemory="0"/>
+      <iteration time="122" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="Scope" time="204" tareTime="3" initTime="0" description="Testing impact of variable scope. 1000000 loops." error="false">
+    <MethodTest name="local" time="8.0" min="8" max="8" deviation="0.000" description="local variables" memory="0" retainedMemory="0">
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="memberImplicit" time="8.0" min="8" max="8" deviation="0.000" description="member variables" memory="0" retainedMemory="0">
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="memberExplicit" time="8.0" min="8" max="8" deviation="0.000" description="member variables w/this" memory="0" retainedMemory="0">
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="staticVars" time="8.0" min="8" max="8" deviation="0.000" description="static variables" memory="0" retainedMemory="0">
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="staticExplicit" time="76.0" min="76" max="76" deviation="0.000" description="static variables explicit" memory="0" retainedMemory="0">
+      <iteration time="76" memory="0" retainedMemory="0"/>
+      <iteration time="76" memory="0" retainedMemory="0"/>
+      <iteration time="76" memory="0" retainedMemory="0"/>
+      <iteration time="76" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="instanceVars" time="8.0" min="8" max="8" deviation="0.000" description="instance variables" memory="0" retainedMemory="0">
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="externalStatic" time="80.8" min="80" max="81" deviation="0.012" description="external static" memory="0" retainedMemory="0">
+      <iteration time="81" memory="0" retainedMemory="0"/>
+      <iteration time="81" memory="0" retainedMemory="0"/>
+      <iteration time="80" memory="0" retainedMemory="0"/>
+      <iteration time="81" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="constants" time="8.0" min="8" max="8" deviation="0.000" description="constants" memory="0" retainedMemory="0">
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+      <iteration time="8" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="StrongTyping" time="297" tareTime="0" initTime="0" description="Demonstrates impact of strong typing. 100000 loops." error="false">
+    <MethodTest name="pointTyped" time="32.3" min="32" max="33" deviation="0.031" description="typed Point" memory="4" retainedMemory="0">
+      <iteration time="33" memory="4" retainedMemory="0"/>
+      <iteration time="32" memory="4" retainedMemory="0"/>
+      <iteration time="32" memory="4" retainedMemory="0"/>
+      <iteration time="32" memory="4" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="pointUntyped" time="69.0" min="69" max="69" deviation="0.000" description="untyped Point" memory="1192" retainedMemory="0">
+      <iteration time="69" memory="1192" retainedMemory="0"/>
+      <iteration time="69" memory="1192" retainedMemory="0"/>
+      <iteration time="69" memory="1192" retainedMemory="0"/>
+      <iteration time="69" memory="1192" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="objectTyped" time="98.5" min="98" max="99" deviation="0.010" description="typed Object" memory="1204" retainedMemory="0">
+      <iteration time="99" memory="1204" retainedMemory="0"/>
+      <iteration time="98" memory="1204" retainedMemory="0"/>
+      <iteration time="99" memory="1204" retainedMemory="0"/>
+      <iteration time="98" memory="1204" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="objectUntyped" time="98.3" min="98" max="99" deviation="0.010" description="untyped Object" memory="1204" retainedMemory="0">
+      <iteration time="99" memory="1204" retainedMemory="0"/>
+      <iteration time="98" memory="1204" retainedMemory="0"/>
+      <iteration time="98" memory="1204" retainedMemory="0"/>
+      <iteration time="98" memory="1204" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="TryCatch" time="48" tareTime="1" initTime="0" description="Demonstrates impact of errors and try/catch. 10000 loops." error="false">
+    <MethodTest name="tryCatchError" time="46.8" min="46" max="47" deviation="0.021" description="try/catch w/Error" memory="2502" retainedMemory="21">
+      <iteration time="47" memory="2520" retainedMemory="28"/>
+      <iteration time="47" memory="2496" retainedMemory="20"/>
+      <iteration time="46" memory="2496" retainedMemory="20"/>
+      <iteration time="47" memory="2496" retainedMemory="20"/>
+    </MethodTest>
+    <MethodTest name="tryCatchNoError" time="1.0" min="1" max="1" deviation="0.000" description="try/catch w/o Error" memory="0" retainedMemory="0">
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="ifNull" time="1.0" min="1" max="1" deviation="0.000" description="null check" memory="0" retainedMemory="0">
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+      <iteration time="1" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+  <TestSuite name="VectorIterators" time="653" tareTime="0" initTime="0" description="Comparison of different numeric types as vector iterators. 10000000 loops." error="false">
+    <MethodTest name="uintTest" time="114.0" min="114" max="114" deviation="0.000" description="uint" memory="0" retainedMemory="0">
+      <iteration time="114" memory="0" retainedMemory="0"/>
+      <iteration time="114" memory="0" retainedMemory="0"/>
+      <iteration time="114" memory="0" retainedMemory="0"/>
+      <iteration time="114" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="intTest" time="144.5" min="144" max="145" deviation="0.007" description="int" memory="0" retainedMemory="0">
+      <iteration time="144" memory="0" retainedMemory="0"/>
+      <iteration time="145" memory="0" retainedMemory="0"/>
+      <iteration time="144" memory="0" retainedMemory="0"/>
+      <iteration time="145" memory="0" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="numberTest" time="395.0" min="394" max="398" deviation="0.010" description="Number" memory="0" retainedMemory="0">
+      <iteration time="398" memory="0" retainedMemory="0"/>
+      <iteration time="394" memory="0" retainedMemory="0"/>
+      <iteration time="394" memory="0" retainedMemory="0"/>
+      <iteration time="394" memory="0" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+</TestCollection>

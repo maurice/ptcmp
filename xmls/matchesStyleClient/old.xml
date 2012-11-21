@@ -1,0 +1,70 @@
+<TestCollection playerVersion="MAC 11,5,500,97" isDebugger="false" playerType="PlugIn" os="Mac OS 10.8.2" manufacturer="Google Macintosh" cpuArchitecture="x86">
+  <TestSuite name="LookForStringInArray" time="21616" tareTime="2" initTime="0" description="Comparing speed of matching a string in space delimited string. 1000000 loops." error="false">
+    <MethodTest name="matchesStyleClient(styleName: &quot;foo&quot;, value: &quot;foo&quot;)" time="1006.0" min="1000" max="1020" deviation="0.020" description="matchesStyleClient(styleName: &quot;foo&quot;, value: &quot;foo&quot;)" memory="123" retainedMemory="7">
+      <iteration time="1000" memory="132" retainedMemory="32"/>
+      <iteration time="1004" memory="120" retainedMemory="0"/>
+      <iteration time="1000" memory="120" retainedMemory="0"/>
+      <iteration time="1020" memory="120" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="matchesStyleClient(styleName: &quot;foo bar&quot;, value: &quot;foo&quot;)" time="2107.0" min="2100" max="2115" deviation="0.007" description="matchesStyleClient(styleName: &quot;foo bar&quot;, value: &quot;foo&quot;)" memory="115" retainedMemory="7">
+      <iteration time="2115" memory="116" retainedMemory="4"/>
+      <iteration time="2110" memory="120" retainedMemory="20"/>
+      <iteration time="2103" memory="116" retainedMemory="8"/>
+      <iteration time="2100" memory="112" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="matchesStyleClient(styleName: &quot;bar foo&quot;, value: &quot;foo&quot;)" time="2099.8" min="2098" max="2103" deviation="0.002" description="matchesStyleClient(styleName: &quot;bar foo&quot;, value: &quot;foo&quot;)" memory="117" retainedMemory="1">
+      <iteration time="2099" memory="116" retainedMemory="0"/>
+      <iteration time="2098" memory="116" retainedMemory="0"/>
+      <iteration time="2099" memory="116" retainedMemory="0"/>
+      <iteration time="2103" memory="120" retainedMemory="4"/>
+    </MethodTest>
+    <MethodTest name="matchesStyleClient(styleName: &quot;baz foo bar&quot;, value: &quot;foo&quot;)" time="3193.8" min="3184" max="3207" deviation="0.007" description="matchesStyleClient(styleName: &quot;baz foo bar&quot;, value: &quot;foo&quot;)" memory="119" retainedMemory="1">
+      <iteration time="3184" memory="124" retainedMemory="4"/>
+      <iteration time="3191" memory="120" retainedMemory="4"/>
+      <iteration time="3193" memory="116" retainedMemory="0"/>
+      <iteration time="3207" memory="116" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="matchesStyleClient(styleName: &quot;foobar&quot;, value: &quot;foo&quot;)" time="1169.5" min="1167" max="1176" deviation="0.008" description="matchesStyleClient(styleName: &quot;foobar&quot;, value: &quot;foo&quot;)" memory="112" retainedMemory="0">
+      <iteration time="1167" memory="112" retainedMemory="0"/>
+      <iteration time="1176" memory="112" retainedMemory="0"/>
+      <iteration time="1167" memory="112" retainedMemory="0"/>
+      <iteration time="1168" memory="112" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="matchesStyleClient(styleName: &quot;foofoo bar&quot;, value: &quot;foo&quot;)" time="2273.8" min="2270" max="2278" deviation="0.004" description="matchesStyleClient(styleName: &quot;foofoo bar&quot;, value: &quot;foo&quot;)" memory="116" retainedMemory="5">
+      <iteration time="2272" memory="120" retainedMemory="8"/>
+      <iteration time="2270" memory="116" retainedMemory="8"/>
+      <iteration time="2275" memory="116" retainedMemory="4"/>
+      <iteration time="2278" memory="116" retainedMemory="4"/>
+    </MethodTest>
+    <MethodTest name="matchesStyleClient(styleName: &quot;fo&quot;, value: &quot;foo&quot;)" time="918.8" min="918" max="920" deviation="0.002" description="matchesStyleClient(styleName: &quot;fo&quot;, value: &quot;foo&quot;)" memory="108" retainedMemory="0">
+      <iteration time="918" memory="108" retainedMemory="0"/>
+      <iteration time="920" memory="108" retainedMemory="0"/>
+      <iteration time="919" memory="108" retainedMemory="0"/>
+      <iteration time="918" memory="108" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="matchesStyleClient(styleName: &quot;fooo&quot;, value: &quot;foo&quot;)" time="1052.8" min="1046" max="1070" deviation="0.023" description="matchesStyleClient(styleName: &quot;fooo&quot;, value: &quot;foo&quot;)" memory="108" retainedMemory="0">
+      <iteration time="1046" memory="108" retainedMemory="0"/>
+      <iteration time="1070" memory="108" retainedMemory="0"/>
+      <iteration time="1048" memory="108" retainedMemory="0"/>
+      <iteration time="1047" memory="108" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="matchesStyleClient(styleName: &quot;2foo bar&quot;, value: &quot;foo&quot;)" time="2149.5" min="2147" max="2151" deviation="0.002" description="matchesStyleClient(styleName: &quot;2foo bar&quot;, value: &quot;foo&quot;)" memory="116" retainedMemory="5">
+      <iteration time="2151" memory="120" retainedMemory="8"/>
+      <iteration time="2147" memory="116" retainedMemory="4"/>
+      <iteration time="2149" memory="112" retainedMemory="0"/>
+      <iteration time="2151" memory="116" retainedMemory="8"/>
+    </MethodTest>
+    <MethodTest name="matchesStyleClient(styleName: &quot;foo2 bar&quot;, value: &quot;foo&quot;)" time="3849.5" min="2145" max="8677" deviation="1.697" description="matchesStyleClient(styleName: &quot;foo2 bar&quot;, value: &quot;foo&quot;)" memory="111" retainedMemory="3">
+      <iteration time="2154" memory="116" retainedMemory="4"/>
+      <iteration time="2145" memory="112" retainedMemory="0"/>
+      <iteration time="2422" memory="112" retainedMemory="8"/>
+      <iteration time="8677" memory="108" retainedMemory="0"/>
+    </MethodTest>
+    <MethodTest name="matchesStyleClient(styleName: &quot;&quot;, value: &quot;foo&quot;)" time="1801.8" min="1793" max="1809" deviation="0.009" description="matchesStyleClient(styleName: &quot;&quot;, value: &quot;foo&quot;)" memory="132" retainedMemory="0">
+      <iteration time="1793" memory="132" retainedMemory="0"/>
+      <iteration time="1807" memory="132" retainedMemory="0"/>
+      <iteration time="1809" memory="132" retainedMemory="0"/>
+      <iteration time="1798" memory="132" retainedMemory="0"/>
+    </MethodTest>
+  </TestSuite>
+</TestCollection>
