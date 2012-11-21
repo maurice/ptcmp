@@ -68,19 +68,18 @@ func parseTests(file string) TestCollection {
 }
 
 func change(before, after float32) float32 {
-	// log.Printf("Before:  %0.2f\nAfter:   %0.2f\n", before, after)
 	if before == after {
 		return 0
 	}
-	delta := -(after - before)
-	change := (delta / before) * 100
-	// log.Printf("Delta:   %0.2f\nChange:  %0.2f%%\n", delta, change)
+	change := 100*after/before - 100
 	return change
 }
 
-const table = `{{$baselineSuites := .BaselineSuites}}{{$testSuites := .TestSuites}}<table>{{range $suiteIndex, $bs := $baselineSuites}}{{$ts := index $testSuites $suiteIndex}}
+var funcMap = template.FuncMap{"change": change}
+
+var html = template.Must(template.New("html").Funcs(funcMap).Parse(`{{$oldSuites := .OldSuites}}{{$testSuites := .NewSuites}}<table>{{range $suiteIndex, $os := $oldSuites}}{{$ns := index $testSuites $suiteIndex}}
 	<tr>
-		<th colspan="5">{{$bs.Description}}</th>
+		<th colspan="5">{{$os.Description}}</th>
 	</tr>
 	<tr>
 		<th align="left">Test</th>
@@ -88,7 +87,7 @@ const table = `{{$baselineSuites := .BaselineSuites}}{{$testSuites := .TestSuite
 		<th align="right">Original memory</th>
 		<th align="right">Time (change %)</th>
 		<th align="right">Memory (change %)</th>
-	</tr>{{range $testIndex, $bt := $bs.Tests}}{{$tt := index $ts.Tests $testIndex}}
+	</tr>{{range $testIndex, $bt := $os.Tests}}{{$tt := index $ns.Tests $testIndex}}
 	<tr>
 		<td><code>{{$bt.Name}}</code></td>
 		<td align="right">{{$bt.Time}}</td>
@@ -97,25 +96,55 @@ const table = `{{$baselineSuites := .BaselineSuites}}{{$testSuites := .TestSuite
 		<td align="right">{{$tt.Memory}} ({{change $bt.Memory $tt.Memory | printf "%0.1f"}})</td>
 	</tr>{{end}}{{end}}
 </table>
-`
+`))
 
-var funcMap = template.FuncMap{"change": change}
-var templ = template.Must(template.New("table").Funcs(funcMap).Parse(table))
+var ascii = template.Must(template.New("ascii").Funcs(funcMap).Parse(`{{/*
+*/}}{{$oldSuites := .OldSuites}}{{/*
+*/}}{{$testSuites := .NewSuites}}{{/*
+*/}}{{range $suiteIndex, $os := $oldSuites}}{{/*
+*/}}{{$ns := index $testSuites $suiteIndex}}{{/*
+*/}}{{$os.Description}}
+{{printf "%-*s %8s %8s %8s %8s %8s %8s" 60 "TEST" "OLD MS" "NEW MS" "DELTA" "OLD MEM" "NEW MEM" "DELTA"}}
+{{range $testIndex, $bt := $os.Tests}}{{/*
+*/}}{{$tt := index $ns.Tests $testIndex}}{{/*
+*/}}{{printf "%-*s" 60 $bt.Name}}{{/*
+*/}}{{printf "%.2f" $bt.Time | printf " %8s"}}{{/*
+*/}}{{printf "%.2f" $tt.Time | printf " %8s"}}{{/*
+*/}}{{change $bt.Time $tt.Time | printf "%.2f" | printf " %8s"}}{{/*
+*/}}{{printf "%.2f" $bt.Memory | printf " %8s"}}{{/*
+*/}}{{printf "%.2f" $tt.Memory | printf " %8s"}}{{/*
+*/}}{{change $bt.Memory $tt.Memory | printf "%.2f" | printf " %8s"}}
+{{end}}
+{{end}}`))
+
+//	{{change $bt.Time $tt.Time | printf "   % 3.1f "}} {{printf "%8.2f %8.2f" $bt.Memory $tt.Memory}}  {{change $bt.Memory $tt.Memory | printf "%3.1f"}}
+
+// {{printf "%8.2f" $bt.Memory}} {{printf "%8.2f" $tt.Time}} ({{change $bt.Time $tt.Time | printf "%3.1f"}}) {{printf "%8.2f" $tt.Memory}} ({{change $bt.Memory $tt.Memory | printf "%3.1f"}})
+
+//{{printf "%-60s" $bt.Name}}{{printf "%8.2f" $bt.Time}} {{printf "%8.2f" $bt.Memory}} {{printf "%8.2f" $tt.Time}} ({{change $bt.Time $tt.Time | printf "%3.1f"}}) {{printf "%8.2f" $tt.Memory}} ({{change $bt.Memory $tt.Memory | printf "%3.1f"}})
 
 func main() {
 	log.SetFlags(0)
 	log.SetPrefix("")
 
-	if len(os.Args) != 3 {
-		log.Fatalf("Usage: %s <baseline-xml-file> <test-xml-file>\n", os.Args[0])
+	args := os.Args[1:]
+
+	templ := ascii
+	if len(args) > 0 && args[0] == "-html" {
+		templ = html
+		args = args[1:]
 	}
 
-	b := parseTests(os.Args[1])
-	t := parseTests(os.Args[2])
+	if len(args) != 2 {
+		log.Fatalf("Usage: %s [-html] <old.xml> <new.xml>\n", os.Args[0])
+	}
+
+	o := parseTests(args[0])
+	n := parseTests(args[1])
 
 	err := templ.Execute(os.Stdout, map[string]interface{}{
-		"BaselineSuites": b.Suites,
-		"TestSuites":     t.Suites})
+		"OldSuites": o.Suites,
+		"NewSuites": n.Suites})
 	if err != nil {
 		log.Fatalf("Failed to execute template: %v\n", err)
 	}
